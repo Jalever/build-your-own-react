@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>build-your-own-react</title>
+</head>
+<body>
+  <div id="root"></div>
+  
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="./mini-react.umd.js"></script>
+	<script>
+		const root = document.getElementById("root");
+		class App extends MiniReact.Component {
+			render() {
+				return MiniReact.createElement("div", null, "Hello ", this.props.name, "!");
+			}
+		}
+		const element = MiniReact.createElement(App, {name: "World"});
+		MiniReact.render(element, root);
+	</script>
+</body>
+</html>

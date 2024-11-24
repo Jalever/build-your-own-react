@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    [
+      "transform-react-jsx",
+      {}
+    ]
+  ],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}

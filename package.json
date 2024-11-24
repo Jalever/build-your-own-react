@@ -4,14 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "serve ./src"
+    "preview": "serve ./dist",
+    "build": "run-p build:module build:main",
+    "build:module": "rollup src/index.js -f es -n MiniReact -o dist/mini-react.es.js",
+    "build:main": "rollup src/index.js -f umd -n MiniReact -o dist/mini-react.umd.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.3.3",
+    "babel-register": "^6.24.1",
+    "browser-env": "^2.0.29",
     "eslint": "8.47.0",
+    "npm-run-all": "^4.0.2",
     "prettier": "3.0.2",
+    "rollup": "^0.41.6",
     "serve": "^14.2.4"
   }
 }

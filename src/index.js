@@ -1,26 +1,15 @@
-function createElement (type, props, ...children) {
-  return {
-    type,
-    props: {
-      ...props,
-      children: children.map(child =>
-        typeof child === 'object'
-          ? child
-          : createTextElement(child)
-      )
-    }
-  }
-}
+import { createElement } from './element';
+import Component from './component';
+import { render } from './reconciler';
 
-function createTextElement (text) {
-  return {
-    type: "TEXT_ELEMENT",
-    props: {
-      nodeValue: text,
-      children: [],
-    }
-  }
-}
+export default {
+  createElement,
+  Component,
+  render
+};
 
-
-
+export {
+  createElement,
+  Component,
+  render
+};
