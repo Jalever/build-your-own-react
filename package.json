@@ -1,0 +1,17 @@
+{
+  "name": "mini-react",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serve ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "8.47.0",
+    "prettier": "3.0.2",
+    "serve": "^14.2.4"
+  }
+}
